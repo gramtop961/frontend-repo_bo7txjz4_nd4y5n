@@ -1,28 +1,43 @@
-import { useState } from 'react'
+import Hero from './components/Hero';
+import CongratulationsSection from './components/CongratulationsSection';
+import EventDetails from './components/EventDetails';
+import Gallery from './components/Gallery';
+import { Home, Image, Calendar } from 'lucide-react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="min-h-screen bg-amber-900 text-amber-50">
+      {/* Simple top nav */}
+      <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-amber-950/40">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+          <a href="#home" className="flex items-center gap-2 font-serif text-xl">
+            <span className="rounded bg-amber-600/90 p-1 text-amber-950"><Home className="h-4 w-4" /></span>
+            Satria & Dewi
+          </a>
+          <div className="hidden items-center gap-4 sm:flex">
+            <a href="#congratulations" className="text-amber-100 hover:text-white">Ucapan</a>
+            <a href="#events" className="text-amber-100 hover:text-white">Acara</a>
+            <a href="#gallery" className="text-amber-100 hover:text-white">Galeri</a>
+          </div>
+        </nav>
+      </header>
 
-export default App
+      <main>
+        <Hero />
+        <CongratulationsSection />
+        <EventDetails />
+        <Gallery />
+      </main>
+
+      <footer className="bg-amber-950/70 py-8 text-center text-amber-200">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="inline-flex items-center gap-2">
+            <Calendar className="h-4 w-4" />
+            27–28 Juli 2025 • Yogyakarta
+          </p>
+          <p className="mt-2 text-sm">Dengan cinta dan batik Jawa yang anggun.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
