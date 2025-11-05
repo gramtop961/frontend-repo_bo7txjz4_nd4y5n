@@ -56,7 +56,7 @@ export default function Hero() {
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl tracking-wide">
           Satria
           <span className="mx-3 text-amber-300">&</span>
-          Dewi
+          Celana
         </h1>
         <p className="mt-4 max-w-xl text-amber-100/90">
           Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan akad nikah dan resepsi pernikahan.

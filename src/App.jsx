@@ -2,7 +2,7 @@ import Hero from './components/Hero';
 import CongratulationsSection from './components/CongratulationsSection';
 import EventDetails from './components/EventDetails';
 import Gallery from './components/Gallery';
-import { Home, Image, Calendar } from 'lucide-react';
+import { Home, Calendar } from 'lucide-react';
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           <a href="#home" className="flex items-center gap-2 font-serif text-xl">
             <span className="rounded bg-amber-600/90 p-1 text-amber-950"><Home className="h-4 w-4" /></span>
-            Satria & Dewi
+            Satria & Celana
           </a>
           <div className="hidden items-center gap-4 sm:flex">
             <a href="#congratulations" className="text-amber-100 hover:text-white">Ucapan</a>
